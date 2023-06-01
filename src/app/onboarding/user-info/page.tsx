@@ -9,9 +9,6 @@ export default function UserInfo() {
     <>
       <TopBar />
       <main className="p-16">
-        <div className="text-lg color:red">Basic User Info</div>
-        <Image src="/icons/check.svg" alt="Check" className="dark:invert" width={24} height={24} priority />
-
         <ScrollSnapFormSlider />
       </main>
     </>

@@ -5,46 +5,51 @@ import { useState } from 'react';
 export const ScrollSnapFormSlider = () => {
   const [sliderIndex, setSliderIndex] = useState<number>(0);
   return (
-    <div>
-      <div>지금클릭된 버튼{sliderIndex}</div>
-      <ul>
-        <li
-          className="h-80"
-          id="1"
+    <ul className="snap-mandatory snap-x w-full h-[calc(100vh-8rem)] overflow-hidden">
+      <li
+        id="1"
+        className="snap-start h-[calc(100vh-8rem)]"
+        onClick={() => {
+          setSliderIndex(1);
+        }}
+      >
+        <div className="text-lg color:red">Basic User Info</div>
+        1번
+        <button
           onClick={() => {
-            setSliderIndex(1);
+            location.hash = '4';
           }}
         >
-          1번
-        </li>
-        <li
-          className="h-80"
-          id="4"
-          onClick={() => {
-            setSliderIndex(4);
-          }}
-        >
-          4번
-        </li>
-        <li
-          id="3"
-          className="h-80"
-          onClick={() => {
-            setSliderIndex(2);
-          }}
-        >
-          3번
-        </li>
-        <li
-          id="2"
-          className="h-80"
-          onClick={() => {
-            setSliderIndex(3);
-          }}
-        >
-          2번
-        </li>
-      </ul>
-    </div>
+          Next
+        </button>
+      </li>
+      <li
+        id="4"
+        className="snap-start h-[calc(100vh-8rem)]"
+        onClick={() => {
+          setSliderIndex(4);
+        }}
+      >
+        4번
+      </li>
+      <li
+        id="3"
+        className="snap-start h-[calc(100vh-8rem)]"
+        onClick={() => {
+          setSliderIndex(2);
+        }}
+      >
+        3번
+      </li>
+      <li
+        id="2"
+        className="snap-start h-[calc(100vh-8rem)]"
+        onClick={() => {
+          setSliderIndex(3);
+        }}
+      >
+        2번
+      </li>
+    </ul>
   );
 };
