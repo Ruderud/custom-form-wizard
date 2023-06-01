@@ -1,6 +1,6 @@
 export const runtime = "edge";
 
-export default function FirstStep() {
+export default function IndexPage() {
   return (
     <main>
       <div>here is onboarding first step</div>
