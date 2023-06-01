@@ -1,3 +1,4 @@
+import { TopBar } from '@/components/client/TopBar';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
