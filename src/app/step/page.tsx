@@ -1,5 +1,5 @@
-export const FirstStep = () => {
-  return <div>here is onboarding first step</div>;
-};
+export const runtime = "edge";
 
-export default FirstStep;
+export default function FirstStep() {
+  return <div>here is onboarding first step</div>;
+}
