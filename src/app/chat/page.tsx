@@ -8,17 +8,19 @@ export const runtime = 'edge';
 export default function IndexPage() {
   const [messages, setMessages] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const fakeInputRef = useRef<HTMLInputElement | null>(null);
 
   const sendMessage: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
-    if (!inputRef.current) return;
+    if (!inputRef.current || !fakeInputRef.current) return;
     const inputValue = inputRef.current.value;
 
     console.log(inputValue);
     setMessages([...messages, inputValue]);
 
     inputRef.current.value = '';
+    fakeInputRef.current.focus();
     inputRef.current.focus();
   };
 
@@ -39,6 +41,8 @@ export default function IndexPage() {
           <input className="w-full text-black" type="text" ref={inputRef} />
           <button type="submit">send</button>
         </form>
+
+        <input className="absolute bottom-[-100vh]" type="text" ref={fakeInputRef} />
       </main>
     </>
   );
