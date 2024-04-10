@@ -1,12 +1,19 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
 export default function Home() {
   return (
     <main>
-      <div className="p-10 flex justify-center text-4xl">Form Wizard Samples</div>
-      <Link href="/onboarding">OnBoarding Sample</Link>
+      <div className="flex justify-center p-10 text-4xl">Form Wizard Samples</div>
+      <ul>
+        <li>
+          <Link href="/onboarding">OnBoarding Sample</Link>
+        </li>
+        <li>
+          <Link href="/chat">Chat Message Sample</Link>
+        </li>
+      </ul>
     </main>
   );
 }

@@ -13,7 +13,7 @@ export const TopBar = () => {
       <Link className="text-black font-bold" href="/">
         Back to Main
       </Link>
-      <button className="text-slate-600" onClick={handleButtonClick}>
+      <button className="text-slate-500" onClick={handleButtonClick}>
         Hide Bar
       </button>
     </div>
